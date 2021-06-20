@@ -13,8 +13,8 @@ from collections import defaultdict
 from scipy.signal import argrelextrema
 from plotly.subplots import make_subplots
 
-@st.cache
-def load_data(allow_output_mutation=True):
+@st.cache(allow_output_mutation=True)
+def load_data():
  
     df_dict = defaultdict()
  
@@ -24,8 +24,8 @@ def load_data(allow_output_mutation=True):
     
     return df_dict 
 
-@st.cache
-def calculate_angle(df, allow_output_mutation=True):
+@st.cache(allow_output_mutation=True)
+def calculate_angle(df):
     df['theta'] = 0
     
     for z in range(len(df)):
