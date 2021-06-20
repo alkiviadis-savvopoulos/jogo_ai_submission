@@ -14,7 +14,7 @@ from scipy.signal import argrelextrema
 from plotly.subplots import make_subplots
 
 @st.cache
-def load_data():
+def load_data(ignore_hash=True):
  
     df_dict = defaultdict()
  
