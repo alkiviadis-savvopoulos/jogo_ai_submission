@@ -14,7 +14,7 @@ from scipy.signal import argrelextrema
 from plotly.subplots import make_subplots
 
 @st.cache
-def load_data(ignore_hash=True):
+def load_data(allow_output_mutation=True):
  
     df_dict = defaultdict()
  
@@ -25,7 +25,7 @@ def load_data(ignore_hash=True):
     return df_dict 
 
 @st.cache
-def calculate_angle(df):
+def calculate_angle(df, allow_output_mutation=True):
     df['theta'] = 0
     
     for z in range(len(df)):
